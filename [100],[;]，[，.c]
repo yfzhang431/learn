@@ -1,6 +1,6 @@
 #include <stdio.h>  
 #include <stdlib.h>  
-#include <time.h>  
+#include <time.h> 
 struct SqList {
     int *Data; 
 int N; //表中现有元素个数
