@@ -32,17 +32,18 @@
 		p->Next=q;	
 		
 	}
-	int main(){
+	int main()
+	{
 		struct Node *L,*L2;
 		L=Creat();
 		L2=Creat();
 		srand((int)time(NULL));
 		int i;
 		for(i=0;i<100;i++){	
-			Insert(L,rand()%200-100); 
+			Insert(L,rand()%201-100); 
 		}
 		Print(L); 
-		struct Node*p,*p2,*q;
+		struct Node *p,*p2,*q;
 		p=L;
 		p2=L2;
 		while(p->Next!=NULL){
@@ -63,5 +64,4 @@
 			printf("\n");
 						printf("\n");
 		Print(L); 
-		return 0;
 	}
