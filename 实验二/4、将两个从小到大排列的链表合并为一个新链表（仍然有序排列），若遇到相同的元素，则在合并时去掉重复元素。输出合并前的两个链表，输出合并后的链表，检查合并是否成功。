@@ -41,7 +41,7 @@ struct Node *creat_2()
 	return L;
 }
 
-void sort(Node *L)
+void min_max(Node *L)
 {
 	Node *p,*r,*q;
 	p = L->Next;	  
@@ -97,17 +97,9 @@ Node* Hebing(Node* head1, Node* head2)
  return head;
 }
 
-void Print(Node *L)
-{
- Node *p = L;
- while(p!=NULL)
- {
-  printf("%d  ",p->Data);
-  p = p->Next;
- }
-}
 
-void shanchucaozuo(Node *H)
+
+void delat(Node *H)
 {
 	Node *p,*q,*r;
 	p=H->Next;
@@ -135,6 +127,15 @@ void shanchucaozuo(Node *H)
         return ;
 }
 
+void Print(Node *L)
+{
+ Node *p = L->Next;
+ while(p!=NULL)
+ {
+  printf("%d  ",p->Data);
+  p = p->Next;
+ }
+}
 int main()
 {
 	Node *L,*p,*q,*r;
@@ -143,12 +144,11 @@ int main()
 	p=p->Next;
     printf("\n");
     printf("\n");
-
     r=Hebing(p,q); 
-    sort(r);
+    min_max(r);
 	Print(r);
     printf("\n");
     printf("\n");
-shanchucaozuo(r);
+    delat(r);
     Print(r);
 }
