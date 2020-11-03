@@ -63,6 +63,8 @@ void sort(Node *L)
 Node* Hebing(Node* head1, Node* head2)  
 {
  Node *head, *p1, *p2;
+  head1=head1->Next;
+  head2=head2->Next;
  if(head1->Data < head2->Data)   
  {
   head = head1;
@@ -99,10 +101,10 @@ Node* Hebing(Node* head1, Node* head2)
 
 void Print(Node *L)
 {
- Node *p = L;
+ Node *p = L->Next;
  while(p!=NULL)
  {
-  printf("%d  ",p->Data);
+  printf("%3d  ",p->Data);
   p = p->Next;
  }
 }
@@ -113,9 +115,8 @@ int main()
     p=creat_1();
     q=creat_2();
     sort(p);
-	p=p->Next;
-	Print(p);
     sort(q);
+	Print(p);
     printf("\n");
     printf("\n");
     Print(q);
