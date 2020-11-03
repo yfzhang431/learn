@@ -22,7 +22,7 @@
 		}
 		return i;
 	}
-	void Print(struct Node *L){
+	void Print_1(struct Node *L){
     	struct Node *q;
     	int i=length_Node(L);
     	int j=0;
@@ -33,7 +33,7 @@
         	j++;
     	}
 	}
-	void Print2(struct Node *L){
+	void Print_2(struct Node *L){
     	struct Node *q;
     	q=L->privous;
     	int i=length_Node(L);
@@ -70,9 +70,9 @@
 		for(i=0;i<10;i++){	
 			Insert(L,rand()%100); 	
 		}
-		Print(L);
+		Print_1(L);
 		printf("\n");
 		printf("\n");
-		Print2(L);
+		Print_2(L);
 		return 0;
 	}
